@@ -29,7 +29,8 @@ public class CountedElement<E extends Comparable<E>> implements Comparable<Count
 	}
 	
 	public String toString() {
-		String x = element.toString();
+
+		String x = "(" + element.toString() + ", " + count + ")";
 		return x;
 	}
 	
