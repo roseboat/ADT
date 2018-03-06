@@ -34,11 +34,11 @@ public class CountedElement<E extends Comparable<E>> implements Comparable<Count
 	}
 	
 	public int compareTo(CountedElement<E> sC1) {
-		if (count < sC1.getCount()) {
-			return -1;
-		} else if (count > sC1.getCount()) {
+		if (element.compareTo(sC1.getElement()) > 0)
 			return 1;
-		} else
+		else if (element.compareTo(sC1.getElement()) < 0)
+			return -1;
+		else
 			return 0;
-		}
+	}
 }
